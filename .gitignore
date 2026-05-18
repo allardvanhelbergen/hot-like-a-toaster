@@ -1,9 +1,15 @@
 # build output
 dist/
+.astro/
 .output/
 
 # dependencies
 node_modules/
+
+# AI Tooling dependencies & caches
+.claude/
+.cline/
+*.log
 
 # logs
 npm-debug.log*
