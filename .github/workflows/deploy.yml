@@ -39,6 +39,11 @@ jobs:
       - name: Build with Astro
         run: npm run build
 
+      - name: Verify Pages artifact files
+        run: |
+          test "$(cat dist/CNAME)" = "hotlikeatoaster.com"
+          test -f dist/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
